@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "tailwind": "^4.0.0"
+    "autoprefixer": "^10.2.1",
+    "tailwindcss": "^2.0.2"
   }
 }
