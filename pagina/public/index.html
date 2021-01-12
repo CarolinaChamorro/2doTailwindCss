@@ -11,10 +11,12 @@
   <link href="css/slider.css" rel="stylesheet">
   <link href="css/animate.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 </head>
 <body>
   <!--======= Menu Bar First =========-->
-  <header class="w-full px-6 bg-gray-900 py-0 flex flex-wrap">
+  <header class="w-full px-6 bg-gray-900 py-0 flex flex-wrap" id="Bar1">
     <div class="w-screen items-center bg-gray-900 mt-2 mb-2">
       <ul class="float-left">
         <li>
@@ -36,12 +38,12 @@
   </header>
   <!--======= Menu Bar First End =========-->
 
-  <header class="w-full px-6 bg-white py-6">
+  <header class="w-full px-6 bg-white py-6 " id="Bar2">
     <!--======= Logo =========-->
     <div class="container mx-auto max-w-4xl md:flex justify-between items-center bg-white ">
       <a href="#"
         class="block py-6 w-full text-center md:text-left md:w-auto text-gray-600 no-underline text-black flex justify-center items-center ">
-        <img src="img/logo_nur_tech.png" alt="Nur-Tech">
+        <img src="img/logo_nur_tech.png" alt="Nur-Tech" id="logo">
       </a>
       <!--======= Logo End =========-->
       <!--======= Boton Donante =========-->
@@ -93,9 +95,13 @@
           </a>
           <a href="#responsive-header"
             class="block mt-4 lg:inline-block lg:mt-0 text-xl 
-                transition duration-200 ease-in-out  hover:text-yellow-50 transform hover:-translate-y-1 hover:scale-110">
+                transition duration-200 ease-in-out  hover:text-yellow-50 transform hover:-translate-y-1 hover:scale-110 mr-4">
             About
           </a>
+          <label for="dark-mode" class="dark-mode-botton  transition duration-200 ease-in-out  hover:text-yellow-50 transform hover:-translate-y-1 hover:scale-110">   
+                  <input type="button" class="switch hover:bg-gray-500" id="dark-mode" onclick="document.documentElement.classList.toggle('dark-mode')">
+                  <span><i class="fas fa-adjust"></i></span>
+              </label>
         </div>
       </div>
     </div>
@@ -104,7 +110,7 @@
 
 
   <!--======= Sliders =========-->
-  <div class="sm:w-full h-auto ">
+  <div class="sm:w-full h-auto " id="slider">
     <div class="carousel relative shadow-2xl bg-white ">
       <div class="carousel-inner relative overflow-hidden ">
         <!--Slide 1-->
@@ -233,8 +239,8 @@
   <!--======= Sliders end =========-->
 
   <!--======= Contenido Que somos =========-->
-
-  <div class="px-9 m-10 flex flex-col   md:flex-row ">
+<div class="bg-white mt-6">
+  <div class="px-8 m-1/2 flex flex-col   md:flex-row ">
     <div class=" text-left">
         <h1 class="font-serif text-5xl font-black">¿QUÉ</h1>
         <h1 class="font-serif text-4xl"> ES NUR TECH ?</h1>
@@ -265,7 +271,7 @@
         </h3>
     </div>
 </div>
-<div class="px-9 m-10 flex flex-col   md:flex-row block">
+<div class="px-9 m-0 flex flex-col   md:flex-row block">
     <div class="m-5">
         <img src="https://img.icons8.com/ios-filled/50/000000/ok-hand-2.png"/>
         <h6 class="font-serif text-lg" >Recolectar</h6>
@@ -284,11 +290,11 @@
             Dona ahora</p>
     </div>
 </div>
-
+</div>
   <!--======= Contenido Que somos end =========-->
 
   <!--======= Seccion 1 =========-->
-  <div class="bg-gradient-to-r from-yellow-400 via-red-500 to-orange-600 text-center py-8">
+  <div class="bg-gradient-to-r  from-yellow-400 via-red-500 to-orange-600 text-center m-0" id="cuadro1">
         <br>
         <h2 class="font-mono text-5xl text-gray-100 md:text-gray-200 bounceInRight">Buscamos</h2>
         <br>
@@ -298,7 +304,8 @@
   <!--======= Seccion 1 end =========-->
 
   <!--======= Contenido 2 =========-->
-<div class= "m-8 flex flex-col md:flex-row">
+  <div class="bg-white mt-6 px-2 mb-4">
+<div class= "m-0 flex flex-col md:flex-row">
         <div >
             <h1 class="font-serif text-3xl font-black">¿CÓMO</h1>
             <h1 class="font-serif text-3xl">PUEDO AYUDAR?</h1>
@@ -318,14 +325,14 @@
             </div>
         </div>
         <div >
-            <img class="w-96 h-96" src="img/donante.jpg" alt="Imagen No Encontrada">
+            <img class="w-96 h-96" src="img/donante.jpg" alt="Imagen No Encontrada" id="foto">
         </div>
     </div>
-
+  </div>
   <!--======= Contenido 2 end =========-->
 
   <!--======= Seccion 2 =========-->
-  <div class="bg-gradient-to-r from-yellow-500 via-red-500 to-orange-600 text-center py-8">
+  <div class="bg-gradient-to-r from-yellow-500 via-red-500 to-orange-600 text-center py-8"  id="cuadro1">
     <br>
     <h3 class="font-mono text-2xl text-gray-200 md:text-gray-200 bounceInLeft">La educación es uno de los factores que más influye en el avance y progreso de personas y sociedades</h3>
     <br>
@@ -333,24 +340,28 @@
   <!--======= Seccion 2 end =========-->
 
   <!--======= Footer =========-->
-  <footer class='w-full text-center border-t border-grey p-4 pin-b text-white  bg-gray-900'>
-  <div class="flex flex-col   md:flex-row ">
+  <footer class='w-full text-center border-t border-grey p-4 pin-b text-white  bg-gray-900' id="footer">
+  <div class="flex flex-col text-center ">
     <div class="tex-center mr-2">
-      <h2 class="lora mb-4">REDES SOCIALES</h2>
+      <h2 class="lora mb-4 text-yellow-600">REDES SOCIALES</h2>
       
-    <button class="hover:bg-yellow-600 hover:text-black rounded-full pl-2 pr-2 poppins"> <i class="fab fa-facebook mb-4 mr-2"></i> Facebook</button>
-    <button class="hover:bg-yellow-600 hover:text-black rounded-full pl-2 pr-2 poppins"> <i class="fab fa-twitter  mt-2 mr-2"></i> Twitter</button>
+    <button class="rounded-full inline-block no-underline shadow md:shadow-lg  text-black text-sm py-2 transition duration-500 ease-in-out bg-yellow-400 hover:bg-yellow-400 hover:text-black 
+    sm:hover:bg-black sm:hover:text-white  md:hover:bg-black md:hover:text-white  transform hover:-translate-y-1 hover:scale-110  pl-2 pr-2 poppins mr-2"> <i class="fab fa-facebook  mr-2"></i> Facebook</button>
+    <button class="rounded-full inline-block no-underline shadow md:shadow-lg  text-black text-sm py-2 transition duration-500 ease-in-out bg-yellow-400 hover:bg-yellow-400 hover:text-black 
+    sm:hover:bg-black sm:hover:text-white  md:hover:bg-black md:hover:text-white  transform hover:-translate-y-1 hover:scale-110  pl-2 pr-2 poppins ml-2"> <i class="fab fa-twitter  mr-2"></i> Twitter</button>
   </div>
       <div class=" text-center ">
-        <h3 class="text-gray-400  text-center text-lg font-light py-2">Participa con Nosotros</h3>
+        <h3 class=" text-center text-lg font-light py-2 text-yellow-600">Participa con Nosotros</h3>
         <p class="text-gray-400 text-center text-lg font-light  py-2">Dirección: Ambato y Garcia Moreno, Campus IST YAVIRAC</p>
         <p class="text-gray-400 text-center text-lg font-light  py-2">Teléfono : (593) 999 705 620 </p>
         <p class="text-gray-400 text-center text-lg font-light  py-2"> Email : probayo@yavirac.edu.ec</p>
       </div>
       <div class="bg-opacity-25 text-center ml-2">
-        <h2 class="lora mb-4">LINKS DE INTERÉS</h2>
-    <button class="hover:bg-yellow-600 hover:text-black rounded-full pl-2 pr-2 poppins"><i class="far fa-check-square"></i>IST YAVIRAC</button>
-    <button class="hover:bg-yellow-600 hover:text-black rounded-full pl-2 pr-2 poppins"><i class="far fa-check-square"></i> Conoce al equipo</button>
+        <h2 class="lora mb-4 text-yellow-600">LINKS DE INTERÉS</h2>
+    <button class="rounded-full inline-block no-underline shadow md:shadow-lg  text-black text-sm py-2 transition duration-500 ease-in-out bg-yellow-400 hover:bg-yellow-400 hover:text-black 
+    sm:hover:bg-black sm:hover:text-white  md:hover:bg-black md:hover:text-white  transform hover:-translate-y-1 hover:scale-110 px-10 pl-2 pr-2 poppins mr-2"><i class="far fa-check-square"></i>IST YAVIRAC</button>
+    <button class="rounded-full inline-block no-underline shadow md:shadow-lg  text-black text-sm py-2 transition duration-500 ease-in-out bg-yellow-400 hover:bg-yellow-400 hover:text-black 
+    sm:hover:bg-black sm:hover:text-white  md:hover:bg-black md:hover:text-white  transform hover:-translate-y-1 hover:scale-110 px-10 pl-2 pr-2 poppins ml-2"><i class="far fa-check-square"></i> Conoce al equipo</button>
       </div>
   </div>
         </footer>
@@ -362,6 +373,9 @@
   <!--======= Footer end =========-->
   <!--script-->
   <script src="js/app.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <scrip src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></scrip>
 </body>
 
 </html>
