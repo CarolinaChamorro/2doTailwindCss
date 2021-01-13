@@ -1,2 +1,2 @@
 # 2doTailwindCss
-Pagina web con tailwind
+Pagina web con tailwind de NUR
